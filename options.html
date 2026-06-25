@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Custom New Tab URL — Options</title>
+  <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+  <div class="panel">
+    <div class="panel-heading">
+      <img id="extension-logo" src="icons/icon128.png" alt="">
+      <h2 class="panel-title">Custom New Tab URL</h2>
+    </div>
+
+    <div class="panel-body">
+      <label class="toggle-row">
+        <span>Enable custom new tab URL</span>
+        <input type="checkbox" id="enabled-parameter">
+      </label>
+
+      <div id="div-url" style="display:none">
+        <div class="field-header">New Tab URL</div>
+        <div class="search-form-group">
+          <input type="url" id="url-parameter" class="url-input" placeholder="https://example.com">
+        </div>
+
+        <div class="field-header">Quick links</div>
+        <div id="chrome-pages">
+          <div><span id="chrome-pages-blank">about:blank</span></div>
+          <div><span id="chrome-pages-apps">chrome://apps</span></div>
+          <div><span id="chrome-pages-bookmarks">chrome://bookmarks</span></div>
+          <div><span id="chrome-pages-downloads">chrome://downloads</span></div>
+          <div><span id="chrome-pages-extensions">chrome://extensions</span></div>
+          <div><span id="chrome-pages-history">chrome://history</span></div>
+          <div><span id="chrome-pages-version">chrome://version</span></div>
+        </div>
+      </div>
+
+      <div id="status" class="status">Options saved!</div>
+
+      <div id="buttons">
+        <button id="save-button" class="btn btn-primary">Save</button>
+        <button id="cancel-button" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/options.js"></script>
+</body>
+</html>

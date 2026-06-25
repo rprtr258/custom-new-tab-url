@@ -1,0 +1,92 @@
+*, *::before, *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+
+body:not(.ready) { visibility: hidden; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#header.visible { opacity: 1; }
+
+#logo {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+#header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #444;
+}
+
+#actions {
+  display: flex;
+  gap: 24px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#actions.visible { opacity: 1; }
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 8px;
+  transition: background 0.15s;
+  user-select: none;
+}
+.action-card:hover,
+.action-card:focus-visible {
+  background: #e8e8e8;
+  outline: none;
+}
+.action-card:focus-visible {
+  outline: 2px solid #888;
+  outline-offset: 2px;
+}
+
+.action-icon {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+.options-icon { background-image: url(../images/options.png); }
+.url-icon     { background-image: url(../images/options.png); }
+
+.action-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #e0e0e0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#footer.visible {
+  opacity: 1;
+}
